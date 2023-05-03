@@ -3,6 +3,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 import fs from 'fs';
 import _ from 'lodash'
+import { log } from "node:console";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -40,4 +41,5 @@ console.log(`существа 2 по силе: ${otvet2}`); ////////////////////
 
 
 let rrr = lll.map(r => r[0]);
+console.log(rrr);
 // END
