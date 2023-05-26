@@ -3,7 +3,8 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 import fs from 'fs';
 import _ from 'lodash'
-import { log } from "node:console";
+
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -40,6 +41,19 @@ let otvet2 = eeee * 20
 console.log(`существа 2 по силе: ${otvet2}`); ////////////////////fffffffffff
 
 
-let rrr = lll.map(r => r[0]);
-console.log(rrr);
+let weight = lll.map(r => r[5]);
+
+let maxWeight = Math.max(...weight)
+let minWeight = Math.min(...weight)
+console.log(maxWeight);
+console.log(minWeight);
+
+let troops = lll.map(r => r[3])
+console.log(troops);
+
+
+let index3 = weight.indexOf(String(maxWeight))
+let index4 = weight.indexOf(String(minWeight))
+console.log(`самый толстый отряд ${troops[index3] * prices[index3]}`)
+console.log(`самый тонкий отряд ${troops[index4] * prices[index4]}`)
 // END
